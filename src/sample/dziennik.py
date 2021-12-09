@@ -101,7 +101,7 @@ class Dziennik:
 		raise ValueError('Nie ma takiego ucznia w bazie')
 
 	def dodaj_uwage(self, id_ucznia, uwaga):
-		if not uwaga:
+		if type(id_ucznia) is not int or type(uwaga) is not str or not uwaga:
 			raise ValueError('Podano złe argumenty')
 		for i in self.lista_uczniow:
 			if i['id'] == id_ucznia:
