@@ -3,6 +3,9 @@ class Dziennik:
 		self.lista_uczniow = lista_uczniow 
 
 	def dodaj_ucznia(self, id_ucznia, imie_ucznia, nazwisko_ucznia):
+		for i in self.lista_uczniow:
+			if i['id'] == id_ucznia:
+				raise ValueError('W bazie już jest taki uczeń')
 		self.lista_uczniow.append({
 			'id': id_ucznia,
 			'imie': imie_ucznia,
