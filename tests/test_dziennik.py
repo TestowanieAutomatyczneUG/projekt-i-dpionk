@@ -66,11 +66,11 @@ class Dziennik_test(unittest.TestCase):
 
 	def test_usun_ucznia_nieprawidlowy_typ_id_2(self):
 		self.assertRaises(ValueError, self.temp.usun_ucznia, 45345.5676786786)
-	@unittest.skip('Niezaimplementowane')
+
 	def test_edytuj_ucznia_sukces(self):
 		self.assertEqual([{'id': 1, 'imie': 'Daria', 'nazwisko': 'Pionk', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [1]}], 'uwagi': []}, {'id': 2, 'imie': 'Jan', 'nazwisko': 'Kowalski', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [6, 3, 6]}, {'przedmiot': 'j. polski', 'oceny': []}], 'uwagi': [{'uwaga': 'Źle się zachowuje'}, {'uwaga': 'Jest niegrzeczny'}]}, {'id': 3, 'imie': 'Jan', 'nazwisko': 'Nowak', 'przedmioty': [], 'uwagi': [{'uwaga': 'Uwaga'}]}],
 		self.temp.edytuj_ucznia(3, 'Jan', 'Nowak'))
-	@unittest.skip('Niezaimplementowane')
+
 	def test_edytuj_ucznia_sukces_2(self):
 		self.assertEqual([{'id': 1, 'imie': 'Daria', 'nazwisko': 'Pionk', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [1]}], 'uwagi': []}, {'id': 2, 'imie': 'Maksymilian', 'nazwisko': 'Malinowski', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [6, 3, 6]}, {'przedmiot': 'j. polski', 'oceny': []}], 'uwagi': [{'uwaga': 'Źle się zachowuje'}, {'uwaga': 'Jest niegrzeczny'}]}, {'id': 3, 'imie': 'Kamil', 'nazwisko': 'Nowak', 'przedmioty': [], 'uwagi': [{'uwaga': 'Uwaga'}]}],
 		self.temp.edytuj_ucznia(2, 'Maksymilian', 'Malinowski'))
