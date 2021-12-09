@@ -1,4 +1,6 @@
 import csv
+import re
+
 
 class Dziennik:
 	def __init__(self, lista_uczniow):
@@ -165,6 +167,10 @@ class Dziennik:
 				raise ValueError('Ten uczeń nie ma takiego przedmiotu na liście')
 		raise ValueError('Nie ma takiego ucznia w bazie')
 	def importuj_dane(self, plik):
+		if type(plik) is not str:
+			raise ValueError('Podano zły format pliku')
+		match = re.search('([a-zA-Z0-9\s_\\.\-\(\):])+(.csv)$', plik)
+		if match:
 				with open(plik, 'r', encoding='utf_8_sig') as csvfile:
 					csvreader = csv.reader(csvfile, delimiter=';')
 					tablica = []
@@ -228,3 +234,5 @@ class Dziennik:
 						tablica.append(obiekt)
 				self.lista_uczniow = tablica
 				return self.lista_uczniow
+		else:
+			raise ValueError('Podano zły format pliku')
