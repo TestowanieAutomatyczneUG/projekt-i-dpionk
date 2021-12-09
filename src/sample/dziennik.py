@@ -51,7 +51,7 @@ class Dziennik:
 		raise ValueError('Nie ma takiego ucznia w bazie')
 
 	def edytuj_przedmiot(self, id_ucznia, przedmiot, nowyPrzedmiot):
-		if przedmiot not in self.przedmioty:
+		if type(id_ucznia) is not int or przedmiot not in self.przedmioty:
 			raise ValueError('Podano złe argumenty')
 		for i in self.lista_uczniow:
 			if i['id'] == id_ucznia:
