@@ -304,11 +304,11 @@ self.temp.dodaj_uwage(3, 'Jest niegrzeczny'))
 
 	def test_dodaj_uwage_nieprawidlowa_uwaga_2(self):
 		self.assertRaises(ValueError, self.temp.dodaj_uwage, 3, {})
-	@unittest.skip('Niezaimplementowane')
+
 	def test_edytuj_uwage_sukces(self):
 		self.assertEqual([{'id': 1, 'imie': 'Daria', 'nazwisko': 'Pionk', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [1]}], 'uwagi': []}, {'id': 2, 'imie': 'Jan', 'nazwisko': 'Kowalski', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [6, 3, 6]}, {'przedmiot': 'j. polski', 'oceny': []}], 'uwagi': [{'uwaga': 'Źle się zachowuje'}, {'uwaga': 'Jest niegrzeczny'}]}, {'id': 3, 'imie': 'Kamil', 'nazwisko': 'Nowak', 'przedmioty': 
 [], 'uwagi': [{'uwaga': 'nowa uwaga'}]}], self.temp.edytuj_uwage(3, 'Uwaga', 'nowa uwaga'))
-	@unittest.skip('Niezaimplementowane')
+
 	def test_edytuj_uwage_sukces_2(self):
 			self.assertEqual([{'id': 1, 'imie': 'Daria', 'nazwisko': 'Pionk',
 							   'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [1]}], 'uwagi': []},

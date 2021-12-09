@@ -111,6 +111,14 @@ class Dziennik:
 				return self.lista_uczniow
 		raise ValueError('Nie ma takiego ucznia w bazie')
 
+	def edytuj_uwage(self, id_ucznia, tresc_uwagi, nowa_tresc_uwagi ):
+		for i in self.lista_uczniow:
+			if i['id'] == id_ucznia:
+				for j in i['uwagi']:
+					if j['uwaga'] == tresc_uwagi:
+						j['uwaga'] = nowa_tresc_uwagi
+						return self.lista_uczniow
+
 	def pokaz_statystyki_przedmiotow(self, id_ucznia):
 		if type(id_ucznia) is not int:
 			raise ValueError('Podano zły argument')
