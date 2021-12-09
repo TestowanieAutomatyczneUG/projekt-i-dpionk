@@ -83,19 +83,19 @@ class Dziennik_test(unittest.TestCase):
 	
 	def test_edytuj_ucznia_nieistniejace_id(self):
 		self.assertRaises(ValueError, self.temp.edytuj_ucznia, 54,'noweImie', 'noweNazwisko')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_edytuj_ucznia_nieprawidlowy_typ_id(self):
 		self.assertRaises(ValueError, self.temp.edytuj_ucznia, True,'noweImie', 'noweNazwisko')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_edytuj_ucznia_nieprawidlowy_typ_id_2(self):
 		self.assertRaises(ValueError, self.temp.edytuj_ucznia, 5645465487.456342423,'noweImie', 'noweNazwisko')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_edytuj_ucznia_nieprawidlowy_typ_imienia(self):
 		self.assertRaises(ValueError, self.temp.edytuj_ucznia, 2 , 4353543, 'noweNazwisko')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_edytuj_ucznia_nieprawidlowy_typ_nazwiska(self):
 		self.assertRaises(ValueError, self.temp.edytuj_ucznia, 2 , 'noweImie', None)
-	@unittest.skip('Niezaimplementowane')
+
 	def test_edytuj_ucznia_nieprawidlowy_typ_argumentow(self):
 		self.assertRaises(ValueError, self.temp.edytuj_ucznia, True , {} , None)
 
