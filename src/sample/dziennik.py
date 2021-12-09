@@ -107,3 +107,19 @@ class Dziennik:
 					'uwaga': uwaga
 				})
 				return self.lista_uczniow
+
+	def pokaz_statystyki_przedmiotow(self, id_ucznia):
+		statystyki = []
+		for i in self.lista_uczniow:
+			if i['id'] == id_ucznia:
+				for j in i['przedmioty']:
+					srednia_z_przedmiotu = []
+					srednia_z_przedmiotu.append(j['przedmiot'])
+					srednia = 0
+					if len(j['oceny']) > 0:
+						for o in j['oceny']:
+								srednia += o
+						srednia = srednia / len(j['oceny'])
+					srednia_z_przedmiotu.append(round(srednia,2))
+					statystyki.append(srednia_z_przedmiotu)
+				return statystyki

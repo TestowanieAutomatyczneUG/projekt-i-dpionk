@@ -231,10 +231,10 @@ class Dziennik_test(unittest.TestCase):
 
 	def test_edytuj_oceny_nieprawidlowy_przedmiot(self):
 		self.assertRaises(ValueError, self.temp.edytuj_oceny, 1, 'dfgfdgdfg', [2])
-	@unittest.skip('Niezaimplementowane')
+
 	def test_pokaz_statystyki_ucznia_sukces(self):
 		self.assertEqual([['matematyka', 5.0], ['j. polski', 0]], self.temp.pokaz_statystyki_przedmiotow(2))
-	@unittest.skip('Niezaimplementowane')
+
 	def test_pokaz_statystyki_ucznia_sukces_2(self):
 		self.assertEqual([], self.temp.pokaz_statystyki_przedmiotow(3))
 	@unittest.skip('Niezaimplementowane')
