@@ -264,7 +264,7 @@ class Dziennik_test(unittest.TestCase):
 
 	def test_pokaz_statystyki_ucznia_przedmiot_nieprawidlowy_przedmiot(self):
 		self.assertRaises(ValueError, self.temp.pokaz_statystyki_przedmiotu, 1, 'sdfsdf')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_pokaz_statystyki_ucznia_przedmiot_nieistniejacy_przedmiot(self):
 		self.assertRaises(ValueError, self.temp.pokaz_statystyki_przedmiotu, 1, 'wychowanie fizyczne')
 
