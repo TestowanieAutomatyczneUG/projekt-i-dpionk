@@ -107,6 +107,7 @@ class Dziennik:
 					'uwaga': uwaga
 				})
 				return self.lista_uczniow
+		raise ValueError('Nie ma takiego ucznia w bazie')
 
 	def pokaz_statystyki_przedmiotow(self, id_ucznia):
 		if type(id_ucznia) is not int:

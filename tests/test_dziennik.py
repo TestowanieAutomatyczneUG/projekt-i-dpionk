@@ -286,7 +286,7 @@ self.temp.dodaj_uwage(3, 'Jest niegrzeczny'))
 							  {'id': 3, 'imie': 'Kamil', 'nazwisko': 'Nowak', 'przedmioty':
 								  [], 'uwagi': [{'uwaga': 'Uwaga'}]}],
 							 self.temp.dodaj_uwage(1, 'nieprzygotowanie'))
-	@unittest.skip('Niezaimplementowane')
+
 	def test_dodaj_uwage_nieistniejace_id(self):
 		self.assertRaises(ValueError, self.temp.dodaj_uwage, 54, 'Uwaga')
 	@unittest.skip('Niezaimplementowane')
