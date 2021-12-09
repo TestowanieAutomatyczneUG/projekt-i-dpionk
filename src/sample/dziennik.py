@@ -112,6 +112,8 @@ class Dziennik:
 		raise ValueError('Nie ma takiego ucznia w bazie')
 
 	def edytuj_uwage(self, id_ucznia, tresc_uwagi, nowa_tresc_uwagi ):
+		if type(id_ucznia) is not int or type(tresc_uwagi) is not str or type(nowa_tresc_uwagi) is not str or not tresc_uwagi or not nowa_tresc_uwagi:
+			raise ValueError('Podano złe argumenty')
 		for i in self.lista_uczniow:
 			if i['id'] == id_ucznia:
 				for j in i['uwagi']:

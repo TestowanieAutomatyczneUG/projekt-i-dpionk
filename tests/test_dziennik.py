@@ -322,31 +322,31 @@ self.temp.dodaj_uwage(3, 'Jest niegrzeczny'))
 
 	def test_edytuj_uwage_nieistniejace_id(self):
 		self.assertRaises(ValueError, self.temp.edytuj_uwage, 54, 'uwaga', 'nowa uwaga')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_edytuj_uwage_nieprawidlowe_id(self):
 		self.assertRaises(ValueError, self.temp.edytuj_uwage, None, 'uwaga', 'nowa uwaga')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_edytuj_uwage_nieprawidlowe_id_2(self):
 		self.assertRaises(ValueError, self.temp.edytuj_uwage, 6546546.6, 'uwaga', 'nowa uwaga')
 
 	def test_edytuj_uwage_nieistniejaca_uwaga(self):
 		self.assertRaises(ValueError, self.temp.edytuj_uwage, 3, 'sfddsfsff', 'nowa uwaga')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_edytuj_uwage_nieprawidlowa_nowa_uwaga(self):
 		self.assertRaises(ValueError, self.temp.edytuj_uwage, 3, 'uwaga', 4569540)
-	@unittest.skip('Niezaimplementowane')
+
 	def test_edytuj_uwage_nieprawidlowa_nowa_uwaga_2(self):
 		self.assertRaises(ValueError, self.temp.edytuj_uwage, 3, 'uwaga', ['dfgfdgfd'])
-	@unittest.skip('Niezaimplementowane')
+
 	def test_edytuj_uwage_pusta_uwaga(self):
 		self.assertRaises(ValueError, self.temp.edytuj_uwage, 3, '', 'nowa uwaga')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_edytuj_uwage_pusta_nowa_uwaga(self):
 		self.assertRaises(ValueError, self.temp.edytuj_uwage, 3, 'uwaga', '')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_edytuj_uwage_nieprawidlowa_uwaga(self):
 		self.assertRaises(ValueError, self.temp.edytuj_uwage, 1, {}, 'nowa uwaga')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_edytuj_uwage_nieprawidlowe_argumenty(self):
 		self.assertRaises(ValueError, self.temp.edytuj_uwage, [], {}, True)
 	@unittest.skip('Niezaimplementowane')
