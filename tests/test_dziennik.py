@@ -150,11 +150,11 @@ class Dziennik_test(unittest.TestCase):
 
 	def test_edytuj_przedmiot_nieprawidlowy_nowy_przedmiot_2(self):
 		self.assertRaises(ValueError, self.temp.edytuj_przedmiot, 2, 'matematyka', [])
-	@unittest.skip('Niezaimplementowane')
+
 	def test_usun_przedmiot_sukces(self):
 		self.assertEqual([{'id': 1, 'imie': 'Daria', 'nazwisko': 'Pionk', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [1]}], 'uwagi': []}, {'id': 2, 'imie': 'Jan', 'nazwisko': 'Kowalski', 'przedmioty': [{'przedmiot': 'j. polski', 'oceny': []}], 'uwagi': [{'uwaga': 'Źle się zachowuje'}, {'uwaga': 'Jest niegrzeczny'}]}, {'id': 3, 'imie': 'Kamil', 'nazwisko': 'Nowak', 'przedmioty': [], 'uwagi': [{'uwaga': 'Uwaga'}]}],
 		self.temp.usun_przedmiot(2, 'matematyka'))
-	@unittest.skip('Niezaimplementowane')
+
 	def test_usun_przedmiot_sukces_2(self):
 		self.assertEqual([{'id': 1, 'imie': 'Daria', 'nazwisko': 'Pionk', 'przedmioty': [], 'uwagi': []}, {'id': 2, 'imie': 'Jan', 'nazwisko': 'Kowalski', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [6, 3, 6]}, {'przedmiot': 'j. polski', 'oceny': []}], 'uwagi': [{'uwaga': 'Źle się zachowuje'}, {'uwaga': 'Jest niegrzeczny'}]}, {'id': 3, 'imie': 'Kamil', 'nazwisko': 'Nowak', 'przedmioty': [], 'uwagi': [{'uwaga': 'Uwaga'}]}],
 		self.temp.usun_przedmiot(1, 'matematyka'))
