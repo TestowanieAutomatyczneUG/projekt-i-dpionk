@@ -255,19 +255,19 @@ class Dziennik_test(unittest.TestCase):
 
 	def test_pokaz_statystyki_ucznia_przedmiot_nieistniejace_id(self):
 		self.assertRaises(ValueError, self.temp.pokaz_statystyki_przedmiotu, 54, 'matematyka')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_pokaz_statystyki_ucznia_przedmiot_nieprawidlowe_id(self):
 		self.assertRaises(ValueError, self.temp.pokaz_statystyki_przedmiotu, {}, 'matematyka')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_pokaz_statystyki_ucznia_przedmiot_nieprawidlowe_id_2(self):
 		self.assertRaises(ValueError, self.temp.pokaz_statystyki_przedmiotu, 6.6699089, 'matematyka')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_pokaz_statystyki_ucznia_przedmiot_nieprawidlowy_przedmiot(self):
 		self.assertRaises(ValueError, self.temp.pokaz_statystyki_przedmiotu, 1, 'sdfsdf')
 	@unittest.skip('Niezaimplementowane')
 	def test_pokaz_statystyki_ucznia_przedmiot_nieistniejacy_przedmiot(self):
 		self.assertRaises(ValueError, self.temp.pokaz_statystyki_przedmiotu, 1, 'wychowanie fizyczne')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_pokaz_statystyki_ucznia_nieprawidlowe_argumenty(self):
 		self.assertRaises(ValueError, self.temp.pokaz_statystyki_przedmiotu, {}, None)
 

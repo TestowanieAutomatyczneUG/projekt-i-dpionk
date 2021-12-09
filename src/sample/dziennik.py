@@ -128,6 +128,8 @@ class Dziennik:
 		raise ValueError('Nie ma takiego ucznia w bazie')
 	
 	def pokaz_statystyki_przedmiotu(self, id_ucznia, przedmiot):
+		if type(id_ucznia) is not int or przedmiot not in self.przedmioty:
+			raise ValueError('Podano złe argumenty')
 		statystyki = []
 		for i in self.lista_uczniow:
 			if i['id'] == id_ucznia:
