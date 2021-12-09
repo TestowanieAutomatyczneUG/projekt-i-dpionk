@@ -74,10 +74,10 @@ class Dziennik_test(unittest.TestCase):
 	def test_edytuj_ucznia_sukces_2(self):
 		self.assertEqual([{'id': 1, 'imie': 'Daria', 'nazwisko': 'Pionk', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [1]}], 'uwagi': []}, {'id': 2, 'imie': 'Maksymilian', 'nazwisko': 'Malinowski', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [6, 3, 6]}, {'przedmiot': 'j. polski', 'oceny': []}], 'uwagi': [{'uwaga': 'Źle się zachowuje'}, {'uwaga': 'Jest niegrzeczny'}]}, {'id': 3, 'imie': 'Kamil', 'nazwisko': 'Nowak', 'przedmioty': [], 'uwagi': [{'uwaga': 'Uwaga'}]}],
 		self.temp.edytuj_ucznia(2, 'Maksymilian', 'Malinowski'))
-	@unittest.skip('Niezaimplementowane')
+
 	def test_edytuj_ucznia_puste_nowe_imie(self):
 		self.assertRaises(ValueError, self.temp.edytuj_ucznia, 2,'', 'noweNazwisko')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_edytuj_ucznia_puste_nowe_nazwisko(self):
 		self.assertRaises(ValueError, self.temp.edytuj_ucznia, 2,'noweImie', '')
 	@unittest.skip('Niezaimplementowane')		

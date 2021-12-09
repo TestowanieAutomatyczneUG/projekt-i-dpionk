@@ -27,6 +27,8 @@ class Dziennik:
 		raise ValueError('Nie ma takiego ucznia w bazie')
 
 	def edytuj_ucznia(self,id_ucznia, nowe_imie_ucznia, nowe_nazwisko_ucznia):
+		if not nowe_imie_ucznia or not nowe_nazwisko_ucznia:
+			raise ValueError('Podano złe argumenty')
 		for i in self.lista_uczniow:
 			if i['id'] == id_ucznia:
 				i['imie'] = nowe_imie_ucznia
