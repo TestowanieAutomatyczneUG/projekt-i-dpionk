@@ -17,6 +17,12 @@ class Dziennik:
 		})
 		return self.lista_uczniow
 
+	def usun_ucznia(self, id_ucznia):
+		for i in self.lista_uczniow:
+			if i['id'] == id_ucznia:
+				self.lista_uczniow.remove(i)
+				return self.lista_uczniow
+
 	def dodaj_przedmiot(self, id_ucznia, przedmiot):
 		for i in self.lista_uczniow:
 			if i['id'] == id_ucznia:
