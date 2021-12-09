@@ -145,4 +145,5 @@ class Dziennik:
 						srednia_z_przedmiotu.append(round(srednia,2))
 						statystyki.append(srednia_z_przedmiotu)
 						return statystyki
+				raise ValueError('Ten uczeń nie ma takiego przedmiotu na liście')
 		raise ValueError('Nie ma takiego ucznia w bazie')
