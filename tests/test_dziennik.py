@@ -289,7 +289,7 @@ self.temp.dodaj_uwage(3, 'Jest niegrzeczny'))
 
 	def test_dodaj_uwage_nieistniejace_id(self):
 		self.assertRaises(ValueError, self.temp.dodaj_uwage, 54, 'Uwaga')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_dodaj_uwage_pusta_uwaga(self):
 		self.assertRaises(ValueError, self.temp.dodaj_uwage, 2, '')
 	@unittest.skip('Niezaimplementowane')
