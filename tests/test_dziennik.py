@@ -376,10 +376,10 @@ self.temp.dodaj_uwage(3, 'Jest niegrzeczny'))
 
 	def test_eksportuj_dane_zly_format_pliku(self):
 		self.assertRaises(ValueError, self.temp.eksportuj_dane, 'data/sdfsf')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_eksportuj_dane_zly_format_pliku_2(self):
 		self.assertRaises(ValueError, self.temp.eksportuj_dane, [])
-	@unittest.skip('Niezaimplementowane')
+
 	def test_eksportuj_dane_zly_format_pliku_3(self):
 		self.assertRaises(ValueError, self.temp.eksportuj_dane, 3)
 

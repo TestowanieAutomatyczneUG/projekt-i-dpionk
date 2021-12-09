@@ -238,6 +238,9 @@ class Dziennik:
 			raise ValueError('Podano zły format pliku')
 
 	def eksportuj_dane(self, plik):
+		if type(plik) is not str:
+			raise ValueError('Podano zły format pliku')
+		else:
 			match = re.search('([a-zA-Z0-9\s_\\.\-\(\):])+(.csv)$', plik)
 			if match:
 				with open(plik, 'w', newline='', encoding='utf_8_sig') as csvfileToWrite:
