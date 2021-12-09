@@ -184,13 +184,13 @@ class Dziennik_test(unittest.TestCase):
 
 	def test_dodaj_ocene_nieistniejace_id(self):
 		self.assertRaises(ValueError, self.temp.dodaj_ocene, 54, 'matematyka', 2)
-	@unittest.skip('Niezaimplementowane')
+
 	def test_dodaj_ocene_nieprawidlowe_id(self):
 		self.assertRaises(ValueError, self.temp.dodaj_ocene, [], 'matematyka', 2)
-	@unittest.skip('Niezaimplementowane')
+
 	def test_dodaj_ocene_nieprawidlowa_ocena(self):
 		self.assertRaises(ValueError, self.temp.dodaj_ocene, 2, 'matematyka', '56464')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_dodaj_ocene_nieprawidlowa_ocena_2(self):
 		self.assertRaises(ValueError, self.temp.dodaj_ocene, 2, 'matematyka', 5.75)
 	@unittest.skip('Niezaimplementowane')

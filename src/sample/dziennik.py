@@ -2,7 +2,7 @@ class Dziennik:
 	def __init__(self, lista_uczniow):
 		self.lista_uczniow = lista_uczniow 
 		self.przedmioty = ['j. polski', 'j. angielski', 'historia', 'matematyka', 'geografia', 'biologia', 'fizyka', 'chemia', 'plastyka', 'muzyka', 'informatyka', 'wychowanie fizyczne']
-
+		self.oceny = [1, 2, 3, 4, 5, 6]
 
 	def dodaj_ucznia(self, id_ucznia, imie_ucznia, nazwisko_ucznia):
 		if type(id_ucznia) is not int or type(imie_ucznia) is not str or type(nazwisko_ucznia) is not str or not imie_ucznia or not nazwisko_ucznia:
@@ -75,6 +75,8 @@ class Dziennik:
 		raise ValueError('Nie ma takiego ucznia w bazie')
 
 	def dodaj_ocene(self, id_ucznia, przedmiot, ocena):
+		if type(id_ucznia) is not int or ocena not in self.oceny:
+			raise ValueError('Podano złe argumenty')
 		for i in self.lista_uczniow:
 			if i['id'] == id_ucznia:
 				for j in i['przedmioty']:
