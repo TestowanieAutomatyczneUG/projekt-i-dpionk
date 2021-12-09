@@ -144,10 +144,10 @@ class Dziennik_test(unittest.TestCase):
 
 	def test_edytuj_przedmiot_nieistniejacy_przedmiot(self):
 		self.assertRaises(ValueError, self.temp.edytuj_przedmiot, 3, 'matematyka', 'informatyka')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_edytuj_przedmiot_nieprawidlowy_nowy_przedmiot(self):
 		self.assertRaises(ValueError, self.temp.edytuj_przedmiot, 1, 'matematyka', 'sdfdsf')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_edytuj_przedmiot_nieprawidlowy_nowy_przedmiot_2(self):
 		self.assertRaises(ValueError, self.temp.edytuj_przedmiot, 2, 'matematyka', [])
 	@unittest.skip('Niezaimplementowane')
