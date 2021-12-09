@@ -1,6 +1,8 @@
 class Dziennik:
 	def __init__(self, lista_uczniow):
 		self.lista_uczniow = lista_uczniow 
+		self.przedmioty = ['j. polski', 'j. angielski', 'historia', 'matematyka', 'geografia', 'biologia', 'fizyka', 'chemia', 'plastyka', 'muzyka', 'informatyka', 'wychowanie fizyczne']
+
 
 	def dodaj_ucznia(self, id_ucznia, imie_ucznia, nazwisko_ucznia):
 		if type(id_ucznia) is not int or type(imie_ucznia) is not str or type(nazwisko_ucznia) is not str or not imie_ucznia or not nazwisko_ucznia:
