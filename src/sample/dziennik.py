@@ -18,6 +18,8 @@ class Dziennik:
 		return self.lista_uczniow
 
 	def usun_ucznia(self, id_ucznia):
+		if type(id_ucznia) is not int:
+			raise ValueError('Podano zły argument')
 		for i in self.lista_uczniow:
 			if i['id'] == id_ucznia:
 				self.lista_uczniow.remove(i)

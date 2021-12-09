@@ -60,10 +60,10 @@ class Dziennik_test(unittest.TestCase):
 
 	def test_usun_ucznia_nieistniejace_id(self):
 		self.assertRaises(ValueError, self.temp.usun_ucznia, 54)
-	@unittest.skip('Niezaimplementowane')
+
 	def test_usun_ucznia_nieprawidlowy_typ_id(self):
 		self.assertRaises(ValueError, self.temp.usun_ucznia, {})
-	@unittest.skip('Niezaimplementowane')
+
 	def test_usun_ucznia_nieprawidlowy_typ_id_2(self):
 		self.assertRaises(ValueError, self.temp.usun_ucznia, 45345.5676786786)
 	@unittest.skip('Niezaimplementowane')
