@@ -126,3 +126,20 @@ class Dziennik:
 					statystyki.append(srednia_z_przedmiotu)
 				return statystyki
 		raise ValueError('Nie ma takiego ucznia w bazie')
+	
+	def pokaz_statystyki_przedmiotu(self, id_ucznia, przedmiot):
+		statystyki = []
+		for i in self.lista_uczniow:
+			if i['id'] == id_ucznia:
+				for j in i['przedmioty']:
+					if j['przedmiot'] == przedmiot:
+						srednia_z_przedmiotu = []
+						srednia_z_przedmiotu.append(j['przedmiot'])
+						srednia = 0
+						if len(j['oceny']) > 0:
+							for o in j['oceny']:
+									srednia += o
+							srednia = srednia / len(j['oceny'])
+						srednia_z_przedmiotu.append(round(srednia,2))
+						statystyki.append(srednia_z_przedmiotu)
+						return statystyki

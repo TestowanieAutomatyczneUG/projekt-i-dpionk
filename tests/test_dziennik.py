@@ -246,10 +246,10 @@ class Dziennik_test(unittest.TestCase):
 
 	def test_pokaz_statystyki_ucznia_nieprawidlowe__id_2(self):
 		self.assertRaises(ValueError, self.temp.pokaz_statystyki_przedmiotow, None)
-	@unittest.skip('Niezaimplementowane')
+
 	def test_pokaz_statystyki_ucznia_przedmiot_sukces(self):
 		self.assertEqual([['matematyka', 5.0]], self.temp.pokaz_statystyki_przedmiotu(2, 'matematyka') )
-	@unittest.skip('Niezaimplementowane')
+
 	def test_pokaz_statystyki_ucznia_przedmiot_sukces_2(self):
 		self.assertEqual([['j. polski', 0]], self.temp.pokaz_statystyki_przedmiotu(2, 'j. polski') )
 	@unittest.skip('Niezaimplementowane')
