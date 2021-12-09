@@ -349,12 +349,12 @@ self.temp.dodaj_uwage(3, 'Jest niegrzeczny'))
 
 	def test_edytuj_uwage_nieprawidlowe_argumenty(self):
 		self.assertRaises(ValueError, self.temp.edytuj_uwage, [], {}, True)
-	@unittest.skip('Niezaimplementowane')
+
 	def test_importuj_dane_sukces(self):
 		self.assertEqual([{'id': 1, 'imie': 'Jan', 'nazwisko': 'Kowalski', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [1, 5, 6]}, {'przedmiot': 'informatyka', 'oceny': [5]}], 'uwagi': []}, {'id': 2, 'imie': 'Maciej', 'nazwisko': 'Nowak', 'przedmioty': [], 'uwagi': [{'uwaga': 'Jest niegrzeczny'}, {'uwaga': 'Przeszkadza na zajeciach'}]}, {'id': 3, 'imie': 'Wojciech', 'nazwisko': 'Przykladowy', 'przedmioty': [{'przedmiot':
 'wychowanie fizyczne', 'oceny': [6, 6]}], 'uwagi': [{'uwaga': 'nieprzygotowanie'}]}],
 		self.temp.importuj_dane('data/data1.csv'))
-	@unittest.skip('Niezaimplementowane')
+
 	def test_importuj_dane_sukces_2(self):
 		self.assertEqual([{'id': 2, 'imie': 'Franciszka', 'nazwisko': 'Sienkiewicz', 'przedmioty': [{'przedmiot': 'chemia', 'oceny': [1, 5, 6, 2, 3]}, {'przedmiot': 'plastyka', 'oceny': [5, 1, 2]}], 'uwagi': []}, {'id': 46, 'imie': 'Oliwier', 'nazwisko': 'Stanek', 'przedmioty': [], 'uwagi': [{'uwaga': 'Jest niegrzeczny'}]}, {'id': 2173, 'imie': 'Maurycy', 'nazwisko': 'Kamiński', 'przedmioty': [{'przedmiot': 'wychowanie fizyczne', 'oceny': [6, 6, 6, 6, 6]}, {'przedmiot': 'geografia', 'oceny': [1, 2, 6]}, {'przedmiot': 'wychowanie fizyczne', 'oceny': [6, 6, 6]}], 'uwagi': [{'uwaga': 'nieprzygotowanie'}]}, {'id': 656, 'imie': 'August', 'nazwisko': 'Wrona', 'przedmioty': [], 'uwagi': []}, {'id': 1, 'imie': 'Maciej', 'nazwisko': 'Jeleń', 'przedmioty': [{'przedmiot': 'wychowanie fizyczne', 'oceny': [6, 6]}], 'uwagi': [{'uwaga': 'nieprzygotowanie'}]}],
 						 self.temp.importuj_dane('data/data1_1.csv'))

@@ -1,3 +1,5 @@
+import csv
+
 class Dziennik:
 	def __init__(self, lista_uczniow):
 		self.lista_uczniow = lista_uczniow 
@@ -162,3 +164,67 @@ class Dziennik:
 						return statystyki
 				raise ValueError('Ten uczeń nie ma takiego przedmiotu na liście')
 		raise ValueError('Nie ma takiego ucznia w bazie')
+	def importuj_dane(self, plik):
+				with open(plik, 'r', encoding='utf_8_sig') as csvfile:
+					csvreader = csv.reader(csvfile, delimiter=';')
+					tablica = []
+			
+					for row in csvreader:
+						id = False
+						imie = False
+						nazwisko = False
+						przedmiot = [False, False]
+						oceny = False
+						uwagi = False
+						obiekt = {'id' : None, 'imie': None, 'nazwisko' : None, 'przedmioty': [], 'uwagi': [] }
+						for element in row:		
+							if id:
+								obiekt['id'] = int(element)
+								id = False				
+							if element == 'id':
+								id = True
+							if imie:
+								obiekt['imie'] = element
+								imie = False
+							if element == 'imie':
+								imie = True
+							if nazwisko:
+								obiekt['nazwisko'] = element
+								nazwisko = False
+							if element == 'nazwisko':
+								nazwisko = True
+							if uwagi:
+								obiekt['uwagi'].append(
+									{
+										'uwaga': element
+									}
+								)
+							if element == 'uwagi':
+								uwagi = True
+								przedmiot = [False, False]
+								oceny = False	
+							if przedmiot[1]:
+								obiekt['przedmioty'].append({
+									'przedmiot': element,
+									'oceny': []
+								})
+								przedmiot = [True, False, element]
+							if przedmiot[0] and oceny and element in self.przedmioty :
+								obiekt['przedmioty'].append({
+									'przedmiot': element,
+									'oceny': []
+								})
+								przedmiot = [True, False, element]
+							if przedmiot[0] and oceny and element not in [ 'oceny','j. polski', 'j. angielski', 'historia', 'matematyka', 'geografia', 'biologia', 'fizyka', 'chemia', 'plastyka', 'muzyka', 'informatyka', 'wychowanie fizyczne']:
+								
+								for i in obiekt['przedmioty']:
+									if i['przedmiot'] == przedmiot[2]:
+										i['oceny'].append(int(element))
+										
+							if przedmiot[0] and element == 'oceny':
+								oceny = True
+							if element == 'przedmioty':
+								przedmiot = [True, True]
+						tablica.append(obiekt)
+				self.lista_uczniow = tablica
+				return self.lista_uczniow
