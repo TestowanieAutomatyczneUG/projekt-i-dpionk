@@ -118,6 +118,8 @@ class Dziennik:
 					if j['uwaga'] == tresc_uwagi:
 						j['uwaga'] = nowa_tresc_uwagi
 						return self.lista_uczniow
+				raise ValueError('Uczeń nie ma takiej uwagi')
+		raise ValueError('Nie ma takiego ucznia w bazie')
 
 	def pokaz_statystyki_przedmiotow(self, id_ucznia):
 		if type(id_ucznia) is not int:

@@ -319,7 +319,7 @@ self.temp.dodaj_uwage(3, 'Jest niegrzeczny'))
 							  {'id': 3, 'imie': 'Kamil', 'nazwisko': 'Nowak', 'przedmioty':
 								  [], 'uwagi': [{'uwaga': 'Uwaga'}]}],
 							 self.temp.edytuj_uwage(2, 'Źle się zachowuje', 'Źle się zachowuje i przeszkadza na lekcji'))
-	@unittest.skip('Niezaimplementowane')
+
 	def test_edytuj_uwage_nieistniejace_id(self):
 		self.assertRaises(ValueError, self.temp.edytuj_uwage, 54, 'uwaga', 'nowa uwaga')
 	@unittest.skip('Niezaimplementowane')
@@ -328,7 +328,7 @@ self.temp.dodaj_uwage(3, 'Jest niegrzeczny'))
 	@unittest.skip('Niezaimplementowane')
 	def test_edytuj_uwage_nieprawidlowe_id_2(self):
 		self.assertRaises(ValueError, self.temp.edytuj_uwage, 6546546.6, 'uwaga', 'nowa uwaga')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_edytuj_uwage_nieistniejaca_uwaga(self):
 		self.assertRaises(ValueError, self.temp.edytuj_uwage, 3, 'sfddsfsff', 'nowa uwaga')
 	@unittest.skip('Niezaimplementowane')
