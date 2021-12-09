@@ -69,6 +69,7 @@ class Dziennik:
 					if j['przedmiot'] == przedmiot:
 						i['przedmioty'].remove(j)
 						return self.lista_uczniow
+		raise ValueError('Nie ma takiego ucznia w bazie')
 
 	def dodaj_ocene(self, id_ucznia, przedmiot, ocena):
 		for i in self.lista_uczniow:
