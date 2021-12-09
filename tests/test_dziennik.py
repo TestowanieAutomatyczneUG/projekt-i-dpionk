@@ -28,10 +28,10 @@ class Dziennik_test(unittest.TestCase):
 
 	def test_dodaj_ucznia_istniejace_id(self):
 		self.assertRaises(ValueError, self.temp.dodaj_ucznia, 1, 'Imie', 'Nazwisko')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_dodaj_ucznia_puste_imie(self):
 		self.assertRaises(ValueError, self.temp.dodaj_ucznia, 7, '', 'Nazwisko')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_dodaj_ucznia_puste_nazwisko(self):
 		self.assertRaises(ValueError, self.temp.dodaj_ucznia, 6, 'Imie', '')
 	@unittest.skip('Niezaimplementowane')
