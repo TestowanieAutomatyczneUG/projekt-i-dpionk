@@ -109,6 +109,8 @@ class Dziennik:
 				return self.lista_uczniow
 
 	def pokaz_statystyki_przedmiotow(self, id_ucznia):
+		if type(id_ucznia) is not int:
+			raise ValueError('Podano zły argument')
 		statystyki = []
 		for i in self.lista_uczniow:
 			if i['id'] == id_ucznia:
