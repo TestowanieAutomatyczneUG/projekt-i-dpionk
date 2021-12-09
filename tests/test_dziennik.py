@@ -164,13 +164,13 @@ class Dziennik_test(unittest.TestCase):
 
 	def test_usun_przedmiot_nieistniejacy_przedmiot(self):
 		self.assertRaises(ValueError, self.temp.usun_przedmiot, 3, 'matematyka')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_usun_przedmiot_nieprawidlowy_przedmiot(self):
 		self.assertRaises(ValueError, self.temp.usun_przedmiot, 3, 'dgfdgfdg')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_usun_przedmiot_nieprawidlowe_id(self):
 		self.assertRaises(ValueError, self.temp.usun_przedmiot, {}, 'matematyka')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_usun_przedmiot_nieprawidlowe_argumenty(self):
 		self.assertRaises(ValueError, self.temp.usun_przedmiot, None, 'dfgfdg')
 

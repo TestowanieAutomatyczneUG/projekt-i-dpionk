@@ -63,6 +63,8 @@ class Dziennik:
 		raise ValueError('Nie ma takiego ucznia w bazie')
 
 	def usun_przedmiot(self, id_ucznia, przedmiot):
+		if type(id_ucznia) is not int or przedmiot not in self.przedmioty:
+			raise ValueError('Podano złe argumenty')
 		for i in self.lista_uczniow:
 			if i['id'] == id_ucznia:
 				for j in i['przedmioty']:
