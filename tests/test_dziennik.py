@@ -385,7 +385,7 @@ self.temp.dodaj_uwage(3, 'Jest niegrzeczny'))
 
 	def test_eksportuj_dane_zly_format_pliku_4(self):
 		self.assertRaises(ValueError, self.temp.eksportuj_dane, 'dfsdf.mp3')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_daj_liste_uczniow(self):
 		self.assertEqual([{'id': 1, 'imie': 'Daria', 'nazwisko': 'Pionk',
 						   'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [1]}], 'uwagi': []},

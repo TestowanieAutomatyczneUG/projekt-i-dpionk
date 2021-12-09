@@ -8,6 +8,9 @@ class Dziennik:
 		self.przedmioty = ['j. polski', 'j. angielski', 'historia', 'matematyka', 'geografia', 'biologia', 'fizyka', 'chemia', 'plastyka', 'muzyka', 'informatyka', 'wychowanie fizyczne']
 		self.oceny = [1, 2, 3, 4, 5, 6]
 
+	def daj_liste_uczniow(self):
+		return self.lista_uczniow
+
 	def dodaj_ucznia(self, id_ucznia, imie_ucznia, nazwisko_ucznia):
 		if type(id_ucznia) is not int or type(imie_ucznia) is not str or type(nazwisko_ucznia) is not str or not imie_ucznia or not nazwisko_ucznia:
 			raise ValueError('Podano złe argumenty')
