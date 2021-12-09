@@ -181,7 +181,7 @@ class Dziennik_test(unittest.TestCase):
 	def test_dodaj_ocene_sukces_2(self):
 		self.assertEqual([{'id': 1, 'imie': 'Daria', 'nazwisko': 'Pionk', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [1]}], 'uwagi': []}, {'id': 2, 'imie': 'Jan', 'nazwisko': 'Kowalski', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [6, 3, 6, 5]}, {'przedmiot': 'j. polski', 'oceny': []}], 'uwagi': [{'uwaga': 'Źle się zachowuje'}, {'uwaga': 'Jest niegrzeczny'}]}, {'id': 3, 'imie': 'Kamil', 'nazwisko': 'Nowak', 'przedmioty': [], 'uwagi': [{'uwaga': 'Uwaga'}]}],
 		self.temp.dodaj_ocene(2, 'matematyka', 5))
-	@unittest.skip('Niezaimplementowane')
+
 	def test_dodaj_ocene_nieistniejace_id(self):
 		self.assertRaises(ValueError, self.temp.dodaj_ocene, 54, 'matematyka', 2)
 	@unittest.skip('Niezaimplementowane')
