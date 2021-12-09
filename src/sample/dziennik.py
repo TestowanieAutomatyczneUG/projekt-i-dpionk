@@ -3,7 +3,7 @@ class Dziennik:
 		self.lista_uczniow = lista_uczniow 
 
 	def dodaj_ucznia(self, id_ucznia, imie_ucznia, nazwisko_ucznia):
-		if not imie_ucznia or not nazwisko_ucznia:
+		if type(id_ucznia) is not int or type(imie_ucznia) is not str or type(nazwisko_ucznia) is not str or not imie_ucznia or not nazwisko_ucznia:
 			raise ValueError('Podano złe argumenty')
 		for i in self.lista_uczniow:
 			if i['id'] == id_ucznia:
