@@ -238,6 +238,8 @@ class Dziennik:
 			raise ValueError('Podano zły format pliku')
 
 	def eksportuj_dane(self, plik):
+			match = re.search('([a-zA-Z0-9\s_\\.\-\(\):])+(.csv)$', plik)
+			if match:
 				with open(plik, 'w', newline='', encoding='utf_8_sig') as csvfileToWrite:
 					writer = csv.writer(csvfileToWrite, delimiter=';')
 					do_napisania = []
@@ -272,3 +274,5 @@ class Dziennik:
 						writer.writerow(w)
 				self.importuj_dane(plik)
 				return self.lista_uczniow
+			else:
+				raise ValueError('Podano zły format pliku')

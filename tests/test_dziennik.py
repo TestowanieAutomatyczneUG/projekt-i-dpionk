@@ -373,7 +373,7 @@ self.temp.dodaj_uwage(3, 'Jest niegrzeczny'))
 
 	def test_eksportuj_dane_sukces(self):
 		self.assertEqual(self.temp.lista_uczniow,  self.temp.eksportuj_dane('data/data2.csv'))
-	@unittest.skip('Niezaimplementowane')
+
 	def test_eksportuj_dane_zly_format_pliku(self):
 		self.assertRaises(ValueError, self.temp.eksportuj_dane, 'data/sdfsf')
 	@unittest.skip('Niezaimplementowane')
@@ -382,7 +382,7 @@ self.temp.dodaj_uwage(3, 'Jest niegrzeczny'))
 	@unittest.skip('Niezaimplementowane')
 	def test_eksportuj_dane_zly_format_pliku_3(self):
 		self.assertRaises(ValueError, self.temp.eksportuj_dane, 3)
-	@unittest.skip('Niezaimplementowane')
+
 	def test_eksportuj_dane_zly_format_pliku_4(self):
 		self.assertRaises(ValueError, self.temp.eksportuj_dane, 'dfsdf.mp3')
 	@unittest.skip('Niezaimplementowane')
