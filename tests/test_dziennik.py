@@ -5,36 +5,24 @@ class Dziennik_test(unittest.TestCase):
 
 	def setUp(self):
 		dziennik = Dziennik([])
-		#dziennik.dodaj_ucznia(1, 'Daria', 'Pionk')
-		#dziennik.dodaj_ucznia(2, 'Jan', 'Kowalski')
-		#dziennik.dodaj_ucznia(3, 'Kamil', 'Nowak')
-		#dziennik.dodaj_przedmiot(2, 'matematyka' )
-		#dziennik.dodaj_przedmiot(2, 'j. polski')
-		#dziennik.dodaj_przedmiot(1, 'matematyka' )
-		#dziennik.dodaj_ocene(2, 'matematyka', 6)
-		#dziennik.dodaj_ocene(2, 'matematyka', 3)
-		#dziennik.dodaj_ocene(2, 'matematyka', 6)
-		#dziennik.dodaj_uwage(2, 'Źle się zachowuje')
-		#dziennik.dodaj_uwage(2, 'Jest niegrzeczny')
-		#dziennik.dodaj_ocene(1, 'matematyka', 1)
-		#dziennik.dodaj_uwage(3, 'Uwaga')
+		dziennik.dodaj_ucznia(1, 'Daria', 'Pionk')
+		dziennik.dodaj_ucznia(2, 'Jan', 'Kowalski')
+		dziennik.dodaj_ucznia(3, 'Kamil', 'Nowak')
+		dziennik.dodaj_przedmiot(2, 'matematyka' )
+		dziennik.dodaj_przedmiot(2, 'j. polski')
+		dziennik.dodaj_przedmiot(1, 'matematyka' )
+		dziennik.dodaj_ocene(2, 'matematyka', 6)
+		dziennik.dodaj_ocene(2, 'matematyka', 3)
+		dziennik.dodaj_ocene(2, 'matematyka', 6)
+		dziennik.dodaj_uwage(2, 'Źle się zachowuje')
+		dziennik.dodaj_uwage(2, 'Jest niegrzeczny')
+		dziennik.dodaj_ocene(1, 'matematyka', 1)
+		dziennik.dodaj_uwage(3, 'Uwaga')
 		self.temp = dziennik
 
-	@unittest.skip('Niezaimplementowane')
-	def test_daj_liste_uczniow(self):
-		self.assertEqual([{'id': 1, 'imie': 'Daria', 'nazwisko': 'Pionk',
-						   'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [1]}], 'uwagi': []},
-						  {'id': 2, 'imie': 'Jan', 'nazwisko': 'Kowalski',
-						   'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [6, 3, 6]},
-										  {'przedmiot': 'j. polski', 'oceny': []}],
-						   'uwagi': [{'uwaga': 'Źle się zachowuje'}, {'uwaga': 'Jest niegrzeczny'}]},
-						  {'id': 3, 'imie': 'Kamil', 'nazwisko': 'Nowak', 'przedmioty': [],
-						   'uwagi': [{'uwaga': 'Uwaga'}]}],
-						 self.temp.daj_liste_uczniow())
-	@unittest.skip('Niezaimplementowane')
 	def test_dodaj_ucznia_sukces(self):
 		self.assertEqual([{'id': 1, 'imie': 'Daria', 'nazwisko': 'Pionk', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [1]}], 'uwagi': []}, {'id': 2, 'imie': 'Jan', 'nazwisko': 'Kowalski', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [6, 3, 6]}, {'przedmiot': 'j. polski', 'oceny': []}], 'uwagi': [{'uwaga': 'Źle się zachowuje'}, {'uwaga': 'Jest niegrzeczny'}]}, {'id': 3, 'imie': 'Kamil', 'nazwisko': 'Nowak', 'przedmioty': [], 'uwagi': [{'uwaga': 'Uwaga'}]}, {'id': 4, 'imie': 'Imie', 'nazwisko': 'Nazwisko', 'przedmioty': [], 'uwagi': []}], self.temp.dodaj_ucznia(4, 'Imie', 'Nazwisko'))
-	@unittest.skip('Niezaimplementowane')
+	
 	def test_dodaj_ucznia_sukces_2(self):
 		self.assertEqual([{'id': 1, 'imie': 'Daria', 'nazwisko': 'Pionk', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [1]}], 'uwagi': []}, {'id': 2, 'imie': 'Jan', 'nazwisko': 'Kowalski', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [6, 3, 6]}, {'przedmiot': 'j. polski', 'oceny': []}], 'uwagi': [{'uwaga': 'Źle się zachowuje'}, {'uwaga': 'Jest niegrzeczny'}]}, {'id': 3, 'imie': 'Kamil', 'nazwisko': 'Nowak', 'przedmioty': [], 'uwagi': [{'uwaga': 'Uwaga'}]}, {'id': 67, 'imie': 'Kazimierz', 'nazwisko': 'Maj', 'przedmioty': [], 'uwagi': []}], self.temp.dodaj_ucznia(67, 'Kazimierz', 'Maj'))
 	@unittest.skip('Niezaimplementowane')
@@ -110,11 +98,11 @@ class Dziennik_test(unittest.TestCase):
 	@unittest.skip('Niezaimplementowane')
 	def test_edytuj_ucznia_nieprawidlowy_typ_argumentow(self):
 		self.assertRaises(ValueError, self.temp.edytuj_ucznia, True , {} , None)
-	@unittest.skip('Niezaimplementowane')
+
 	def test_dodaj_przedmiot_sukces(self):
 		self.assertEqual([{'id': 1, 'imie': 'Daria', 'nazwisko': 'Pionk', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [1]}], 'uwagi': []}, {'id': 2, 'imie': 'Jan', 'nazwisko': 'Kowalski', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [6, 3, 6]}, {'przedmiot': 'j. polski', 'oceny': []}], 'uwagi': [{'uwaga': 'Źle się zachowuje'}, {'uwaga': 'Jest niegrzeczny'}]}, {'id': 3, 'imie': 'Kamil', 'nazwisko': 'Nowak', 'przedmioty': [{'przedmiot': 'j. polski', 'oceny': []}], 'uwagi': [{'uwaga': 'Uwaga'}]}],
 		self.temp.dodaj_przedmiot(3, 'j. polski'))
-	@unittest.skip('Niezaimplementowane')
+
 	def test_dodaj_przedmiot_sukces_2(self):
 		self.assertEqual([{'id': 1, 'imie': 'Daria', 'nazwisko': 'Pionk', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [1]}, {'przedmiot': 'muzyka', 'oceny': []}], 'uwagi': []}, {'id': 2, 'imie': 'Jan', 'nazwisko': 'Kowalski', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [6, 3, 6]}, {'przedmiot': 'j. polski', 'oceny': []}], 'uwagi': [{'uwaga': 'Źle się zachowuje'}, {'uwaga': 'Jest niegrzeczny'}]}, {'id': 3, 'imie': 'Kamil', 'nazwisko': 'Nowak', 'przedmioty': [], 'uwagi': [{'uwaga': 'Uwaga'}]}],
 		self.temp.dodaj_przedmiot(1, 'muzyka'))
@@ -185,11 +173,11 @@ class Dziennik_test(unittest.TestCase):
 	@unittest.skip('Niezaimplementowane')
 	def test_usun_przedmiot_nieprawidlowe_argumenty(self):
 		self.assertRaises(ValueError, self.temp.usun_przedmiot, None, 'dfgfdg')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_dodaj_ocene_sukces(self):
 		self.assertEqual([{'id': 1, 'imie': 'Daria', 'nazwisko': 'Pionk', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [1, 1]}], 'uwagi': []}, {'id': 2, 'imie': 'Jan', 'nazwisko': 'Kowalski', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [6, 3, 6]}, {'przedmiot': 'j. polski', 'oceny': []}], 'uwagi': [{'uwaga': 'Źle się zachowuje'}, {'uwaga': 'Jest niegrzeczny'}]}, {'id': 3, 'imie': 'Kamil', 'nazwisko': 'Nowak', 'przedmioty': [], 'uwagi': [{'uwaga': 'Uwaga'}]}],
 		self.temp.dodaj_ocene(1, 'matematyka', 1))
-	@unittest.skip('Niezaimplementowane')
+
 	def test_dodaj_ocene_sukces_2(self):
 		self.assertEqual([{'id': 1, 'imie': 'Daria', 'nazwisko': 'Pionk', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [1]}], 'uwagi': []}, {'id': 2, 'imie': 'Jan', 'nazwisko': 'Kowalski', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [6, 3, 6, 5]}, {'przedmiot': 'j. polski', 'oceny': []}], 'uwagi': [{'uwaga': 'Źle się zachowuje'}, {'uwaga': 'Jest niegrzeczny'}]}, {'id': 3, 'imie': 'Kamil', 'nazwisko': 'Nowak', 'przedmioty': [], 'uwagi': [{'uwaga': 'Uwaga'}]}],
 		self.temp.dodaj_ocene(2, 'matematyka', 5))
@@ -273,12 +261,12 @@ class Dziennik_test(unittest.TestCase):
 	@unittest.skip('Niezaimplementowane')
 	def test_pokaz_statystyki_ucznia_nieprawidlowe_argumenty(self):
 		self.assertRaises(ValueError, self.temp.pokaz_statystyki_przedmiotu, {}, None)
-	@unittest.skip('Niezaimplementowane')
+
 	def test_dodaj_uwage_sukces(self):
 		self.assertEqual([{'id': 1, 'imie': 'Daria', 'nazwisko': 'Pionk', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [1]}], 'uwagi': []}, {'id': 2, 'imie': 'Jan', 'nazwisko': 'Kowalski', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [6, 3, 6]}, {'przedmiot': 'j. polski', 'oceny': []}], 'uwagi': [{'uwaga': 'Źle się zachowuje'}, {'uwaga': 'Jest niegrzeczny'}]}, {'id': 3, 'imie': 'Kamil', 'nazwisko': 'Nowak', 'przedmioty': 
 [], 'uwagi': [{'uwaga': 'Uwaga'}, {'uwaga': 'Jest niegrzeczny'}]}],
 self.temp.dodaj_uwage(3, 'Jest niegrzeczny'))
-	@unittest.skip('Niezaimplementowane')
+
 	def test_dodaj_uwage_sukces_2(self):
 			self.assertEqual([{'id': 1, 'imie': 'Daria', 'nazwisko': 'Pionk',
 							   'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [1]}], 'uwagi': [{'uwaga': 'nieprzygotowanie'}]},
@@ -388,6 +376,17 @@ self.temp.dodaj_uwage(3, 'Jest niegrzeczny'))
 	@unittest.skip('Niezaimplementowane')
 	def test_eksportuj_dane_zly_format_pliku_4(self):
 		self.assertRaises(ValueError, self.temp.eksportuj_dane, 'dfsdf.mp3')
+	@unittest.skip('Niezaimplementowane')
+	def test_daj_liste_uczniow(self):
+		self.assertEqual([{'id': 1, 'imie': 'Daria', 'nazwisko': 'Pionk',
+						   'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [1]}], 'uwagi': []},
+						  {'id': 2, 'imie': 'Jan', 'nazwisko': 'Kowalski',
+						   'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [6, 3, 6]},
+										  {'przedmiot': 'j. polski', 'oceny': []}],
+						   'uwagi': [{'uwaga': 'Źle się zachowuje'}, {'uwaga': 'Jest niegrzeczny'}]},
+						  {'id': 3, 'imie': 'Kamil', 'nazwisko': 'Nowak', 'przedmioty': [],
+						   'uwagi': [{'uwaga': 'Uwaga'}]}],
+						 self.temp.daj_liste_uczniow())
 
 	def tearDown(self):
 		self.temp = None
