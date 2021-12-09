@@ -135,7 +135,7 @@ class Dziennik_test(unittest.TestCase):
 
 	def test_edytuj_przedmiot_nieprawidlowy_przedmiot_2(self):
 		self.assertRaises(ValueError, self.temp.edytuj_przedmiot, 2, None, 'matematyka')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_edytuj_przedmiot_nieistniejace_id(self):
 		self.assertRaises(ValueError, self.temp.edytuj_przedmiot, 54, 'matematyka', 'informatyka')
 	@unittest.skip('Niezaimplementowane')
