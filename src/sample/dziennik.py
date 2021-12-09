@@ -37,6 +37,8 @@ class Dziennik:
 		raise ValueError('Nie ma takiego ucznia w bazie')
 
 	def dodaj_przedmiot(self, id_ucznia, przedmiot):
+		if type(id_ucznia) is not int:
+			raise ValueError('Podano złe argumenty')
 		for i in self.lista_uczniow:
 			if i['id'] == id_ucznia:
 				i['przedmioty'].append({

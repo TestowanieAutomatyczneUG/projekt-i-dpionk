@@ -109,10 +109,10 @@ class Dziennik_test(unittest.TestCase):
 
 	def test_dodaj_przedmiot_nieistniejace_id(self):
 		self.assertRaises(ValueError, self.temp.dodaj_przedmiot, 54, 'j. polski')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_dodaj_przedmiot_nieprawidlowy_typ_id(self):
 		self.assertRaises(ValueError, self.temp.dodaj_przedmiot, 54.556546, 'j. polski')
-	@unittest.skip('Niezaimplementowane')
+
 	def test_dodaj_przedmiot_nieprawidlowy_typ_id_2(self):
 		self.assertRaises(ValueError, self.temp.dodaj_przedmiot, True, 'j. polski')
 	@unittest.skip('Niezaimplementowane')
