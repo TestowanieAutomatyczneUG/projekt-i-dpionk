@@ -236,3 +236,39 @@ class Dziennik:
 				return self.lista_uczniow
 		else:
 			raise ValueError('Podano zły format pliku')
+
+	def eksportuj_dane(self, plik):
+				with open(plik, 'w', newline='', encoding='utf_8_sig') as csvfileToWrite:
+					writer = csv.writer(csvfileToWrite, delimiter=';')
+					do_napisania = []
+
+					for i in self.lista_uczniow:
+						wiersz = []
+						for j in i:
+							if j == 'id':
+								wiersz.append('id')
+							if j == 'imie':
+								wiersz.append('imie')
+							if j == 'nazwisko':
+								wiersz.append('nazwisko')
+							if j == 'przedmioty':
+								wiersz.append('przedmioty')
+							if wiersz[-1] in ['id', 'imie', 'nazwisko']:
+								wiersz.append(i[j])
+							if wiersz[-1] == 'przedmioty':
+								for z in i[j]:
+									if 'przedmiot' in z:
+										wiersz.append(z['przedmiot'])
+										wiersz.append('oceny')
+										for o in z['oceny']:
+											wiersz.append(o)
+								wiersz.append('uwagi')
+							if wiersz[-1] == 'uwagi':
+								for z in i[j]:
+									if 'uwaga' in z:
+										wiersz.append(z['uwaga'])	
+						do_napisania.append(wiersz)
+					for w in do_napisania:
+						writer.writerow(w)
+				self.importuj_dane(plik)
+				return self.lista_uczniow

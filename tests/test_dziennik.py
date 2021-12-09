@@ -370,7 +370,7 @@ self.temp.dodaj_uwage(3, 'Jest niegrzeczny'))
 
 	def test_importuj_dane_zly_format_pliku_4(self):
 		self.assertRaises(ValueError, self.temp.importuj_dane, 3)
-	@unittest.skip('Niezaimplementowane')
+
 	def test_eksportuj_dane_sukces(self):
 		self.assertEqual(self.temp.lista_uczniow,  self.temp.eksportuj_dane('data/data2.csv'))
 	@unittest.skip('Niezaimplementowane')
