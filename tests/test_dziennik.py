@@ -57,7 +57,7 @@ class Dziennik_test(unittest.TestCase):
 	def test_usun_ucznia_sukces_2(self):
 		self.assertEqual([{'id': 2, 'imie': 'Jan', 'nazwisko': 'Kowalski', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [6, 3, 6]}, {'przedmiot': 'j. polski', 'oceny': []}], 'uwagi': [{'uwaga': 'Źle się zachowuje'}, {'uwaga': 'Jest niegrzeczny'}]}, {'id': 3, 'imie': 'Kamil', 'nazwisko': 'Nowak', 'przedmioty': [], 'uwagi': [{'uwaga': 'Uwaga'}]}]
 		, self.temp.usun_ucznia(1))
-	@unittest.skip('Niezaimplementowane')
+
 	def test_usun_ucznia_nieistniejace_id(self):
 		self.assertRaises(ValueError, self.temp.usun_ucznia, 54)
 	@unittest.skip('Niezaimplementowane')

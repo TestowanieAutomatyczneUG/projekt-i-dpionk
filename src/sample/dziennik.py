@@ -22,6 +22,7 @@ class Dziennik:
 			if i['id'] == id_ucznia:
 				self.lista_uczniow.remove(i)
 				return self.lista_uczniow
+		raise ValueError('Nie ma takiego ucznia w bazie')
 
 	def dodaj_przedmiot(self, id_ucznia, przedmiot):
 		for i in self.lista_uczniow:
