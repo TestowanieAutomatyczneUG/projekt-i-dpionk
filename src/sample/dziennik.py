@@ -83,6 +83,7 @@ class Dziennik:
 					if j['przedmiot'] == przedmiot:
 						j['oceny'].append(ocena)
 						return self.lista_uczniow
+				raise ValueError('Ten uczeń nie ma takiego przedmiotu na liście')	
 		raise ValueError('Nie ma takiego ucznia w bazie')
 
 	def dodaj_uwage(self, id_ucznia, uwaga):
