@@ -34,6 +34,7 @@ class Dziennik:
 				i['imie'] = nowe_imie_ucznia
 				i['nazwisko'] = nowe_nazwisko_ucznia
 				return self.lista_uczniow
+		raise ValueError('Nie ma takiego ucznia w bazie')
 
 	def dodaj_przedmiot(self, id_ucznia, przedmiot):
 		for i in self.lista_uczniow:

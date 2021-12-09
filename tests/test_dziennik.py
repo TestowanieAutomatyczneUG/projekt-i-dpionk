@@ -80,7 +80,7 @@ class Dziennik_test(unittest.TestCase):
 
 	def test_edytuj_ucznia_puste_nowe_nazwisko(self):
 		self.assertRaises(ValueError, self.temp.edytuj_ucznia, 2,'noweImie', '')
-	@unittest.skip('Niezaimplementowane')		
+	
 	def test_edytuj_ucznia_nieistniejace_id(self):
 		self.assertRaises(ValueError, self.temp.edytuj_ucznia, 54,'noweImie', 'noweNazwisko')
 	@unittest.skip('Niezaimplementowane')
