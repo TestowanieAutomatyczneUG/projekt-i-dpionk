@@ -87,6 +87,8 @@ class Dziennik:
 		raise ValueError('Nie ma takiego ucznia w bazie')
 
 	def edytuj_oceny(self, id_ucznia, przedmiot, nowe_oceny):
+		if type(id_ucznia) is not int or przedmiot not in self.przedmioty or type(nowe_oceny) is not list:
+			raise ValueError('Podano złe argumenty')
 		for o in nowe_oceny:
 			if o not in self.oceny:
 				raise ValueError('Podano złe oceny')

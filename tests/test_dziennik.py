@@ -219,7 +219,16 @@ class Dziennik_test(unittest.TestCase):
 
 	def test_edytuj_oceny_nieistniejace_id(self):
 		self.assertRaises(ValueError, self.temp.edytuj_oceny, 54, 'matematyka', [2])
-	@unittest.skip('Niezaimplementowane')
+
+	def test_edytuj_oceny_nieprawidlowy_typ_ocen(self):
+		self.assertRaises(ValueError, self.temp.edytuj_oceny, [], 'matematyka', 2)
+
+	def test_edytuj_oceny_nieprawidlowy_typ_ocen_2(self):
+		self.assertRaises(ValueError, self.temp.edytuj_oceny, [], 'matematyka', {'ocena': 3})
+
+	def test_edytuj_oceny_nieprawidlowe_id(self):
+		self.assertRaises(ValueError, self.temp.edytuj_oceny, [], 'matematyka', [2])
+
 	def test_edytuj_oceny_nieprawidlowy_przedmiot(self):
 		self.assertRaises(ValueError, self.temp.edytuj_oceny, 1, 'dfgfdgdfg', [2])
 	@unittest.skip('Niezaimplementowane')
