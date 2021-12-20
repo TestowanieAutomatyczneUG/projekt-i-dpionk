@@ -15,20 +15,7 @@ add_extension(ma_przedmiot)
 class Dziennik_test_assertpy(unittest.TestCase):
 
     def setUp(self):
-        dziennik = Dziennik([])
-        dziennik.dodaj_ucznia(1, 'Daria', 'Pionk')
-        dziennik.dodaj_ucznia(2, 'Jan', 'Kowalski')
-        dziennik.dodaj_ucznia(3, 'Kamil', 'Nowak')
-        dziennik.dodaj_przedmiot(2, 'matematyka' )
-        dziennik.dodaj_przedmiot(2, 'j. polski')
-        dziennik.dodaj_przedmiot(1, 'matematyka' )
-        dziennik.dodaj_ocene(2, 'matematyka', 6)
-        dziennik.dodaj_ocene(2, 'matematyka', 3)
-        dziennik.dodaj_ocene(2, 'matematyka', 6)
-        dziennik.dodaj_uwage(2, 'Źle się zachowuje')
-        dziennik.dodaj_uwage(2, 'Jest niegrzeczny')
-        dziennik.dodaj_ocene(1, 'matematyka', 1)
-        dziennik.dodaj_uwage(3, 'Uwaga')
+        dziennik = Dziennik([{'id': 1, 'imie': 'Daria', 'nazwisko': 'Pionk', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [1]}], 'uwagi': []}, {'id': 2, 'imie': 'Jan', 'nazwisko': 'Kowalski', 'przedmioty': [{'przedmiot': 'matematyka', 'oceny': [6, 3, 6]}, {'przedmiot': 'j. polski', 'oceny': []}], 'uwagi': [{'uwaga': 'Źle się zachowuje'}, {'uwaga': 'Jest niegrzeczny'}]}, {'id': 3, 'imie': 'Kamil', 'nazwisko': 'Nowak', 'przedmioty': [], 'uwagi': [{'uwaga': 'Uwaga'}]}])
         self.temp = dziennik
 
     def testInstance(self):
